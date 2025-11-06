@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="crud_cliente.ClienteListController"
+            prefWidth="1000" prefHeight="700"
+            style="-fx-background-color: #e9e5e5;">
+
+    <VBox spacing="0" alignment="TOP_CENTER" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" 
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+        <!-- Cabeçalho -->
+        <VBox spacing="8" alignment="CENTER" style="-fx-background-color: #2E7D32; -fx-padding: 20; -fx-background-radius: 10 10 0 0;">
+            <Label text="Gerenciamento de Clientes" 
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 2, 0, 1, 1);" />
+            <Label text="Visualize e gerencie todos os clientes cadastrados" 
+                   style="-fx-font-size: 14px; -fx-text-fill: #e8f5e8; -fx-font-style: italic;" />
+        </VBox>
+
+        <!-- Conteúdo -->
+        <VBox spacing="20" alignment="TOP_LEFT" style="-fx-background-color: white; -fx-padding: 25; -fx-border-color: #dee2e6; -fx-border-width: 0 1px 1px 1px; -fx-border-radius: 0 0 10 10; -fx-background-radius: 0 0 10 10;">
+            
+            <!-- Tabela -->
+            <VBox spacing="10">
+                <Label text="Lista de Clientes Cadastrados" styleClass="crud-section-title" />
+                
+                <TableView fx:id="tableClientes" prefHeight="400" styleClass="unified-table">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="70" />
+                        <TableColumn fx:id="colNome" text="Nome" prefWidth="180" />
+                        <TableColumn fx:id="colEmail" text="E-mail" prefWidth="200" />
+                        <TableColumn fx:id="colTelefone" text="Telefone" prefWidth="120" />
+                        <TableColumn fx:id="colCidade" text="Cidade" prefWidth="120" />
+                        <TableColumn fx:id="colEstado" text="Estado" prefWidth="80" />
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="100" />
+                        <TableColumn fx:id="colDataCadastro" text="Data Cadastro" prefWidth="120" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Botões de ação -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Novo Cliente" onAction="#abrirCadastro" styleClass="crud-button" />
+                <Button text="Editar Cliente" onAction="#editarCliente" styleClass="crud-button-secondary" />
+                <Button text="Excluir Cliente" onAction="#excluirCliente" styleClass="crud-button-danger" />
+                <Button text="Atualizar Lista" onAction="#atualizarLista" styleClass="crud-button-warning" />
+            </HBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

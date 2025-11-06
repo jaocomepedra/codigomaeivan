@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tela_login.LoginController"
+            prefWidth="450" prefHeight="650"
+            style="-fx-background-color: #2E7D32;">
+
+    <VBox spacing="0" alignment="CENTER" 
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" 
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Container principal -->
+        <VBox spacing="25" alignment="CENTER" 
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 40;"
+              prefWidth="400" prefHeight="600"
+              maxWidth="400" maxHeight="600">
+            
+            <!-- Logo -->
+            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@/imagens/Logo02.png" />
+                </image>
+            </ImageView>
+
+            <!-- Título -->
+            <VBox spacing="5" alignment="CENTER">
+                <Label text="Flor &amp; Ser" 
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2E7D32;" />
+                <Label text="Sistema de Floricultura" 
+                       style="-fx-font-size: 14px; -fx-text-fill: #666; -fx-font-style: italic;" />
+            </VBox>
+
+            <!-- Formulário de login -->
+            <VBox spacing="20" alignment="CENTER_LEFT" prefWidth="320">
+                <VBox spacing="8">
+                    <Label text="E-mail" style="-fx-font-weight: bold; -fx-text-fill: #333; -fx-font-size: 13px;" />
+                    <TextField fx:id="txtEmail" promptText="seu@email.com" 
+                               styleClass="login-field"
+                               style="-fx-pref-height: 45; -fx-font-size: 14px;" />
+                </VBox>
+
+                <VBox spacing="8">
+                    <Label text="Senha" style="-fx-font-weight: bold; -fx-text-fill: #333; -fx-font-size: 13px;" />
+                    <PasswordField fx:id="txtSenha" promptText="Sua senha" 
+                                   styleClass="login-field"
+                                   style="-fx-pref-height: 45; -fx-font-size: 14px;" />
+                </VBox>
+
+                <Button text="Entrar" onAction="#fazerLogin" 
+                        styleClass="login-button"
+                        style="-fx-pref-width: 320; -fx-pref-height: 45; -fx-font-size: 15px;"
+                        defaultButton="true" />
+
+                <Label fx:id="lblMensagem" style="-fx-text-fill: #d32f2f; -fx-font-size: 13px; -fx-padding: 5 0;" />
+            </VBox>
+
+            <!-- Divisor -->
+            <HBox spacing="10" alignment="CENTER" prefWidth="320">
+                <Region style="-fx-background-color: #e0e0e0; -fx-pref-height: 1; -fx-pref-width: 100;" />
+                <Label text="ou" style="-fx-text-fill: #666; -fx-font-size: 12px;" />
+                <Region style="-fx-background-color: #e0e0e0; -fx-pref-height: 1; -fx-pref-width: 100;" />
+            </HBox>
+
+            <!-- Login social -->
+            <VBox spacing="12" alignment="CENTER" prefWidth="320">
+                <Button text="Entrar com Google" 
+                        style="-fx-background-color: #ffffff; -fx-text-fill: #333; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-pref-width: 320; -fx-pref-height: 45; -fx-font-size: 14px;">
+                    <graphic>
+                        <Label text="G" style="-fx-text-fill: #4285F4; -fx-font-weight: bold; -fx-font-size: 16px;"/>
+                    </graphic>
+                </Button>
+
+                <Button text="Entrar com Apple" 
+                        style="-fx-background-color: #000000; -fx-text-fill: white; -fx-border-color: #000; -fx-border-radius: 8; -fx-background-radius: 8; -fx-pref-width: 320; -fx-pref-height: 45; -fx-font-size: 14px;">
+                    <graphic>
+                        <Label text="A" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px;"/>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <!-- Rodapé simplificado -->
+            <VBox spacing="8" alignment="CENTER">
+                <Separator prefWidth="280" />
+                <Label text="Sistema Floricultura v1.0" 
+                       style="-fx-text-fill: #666; -fx-font-size: 12px; -fx-font-style: italic;" />
+            </VBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tela_login.CadastroUsuarioController"
+            prefWidth="450" prefHeight="550"
+            style="-fx-background-color: #f5f5f5;">
+
+    <VBox spacing="20" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" 
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20"
+          style="-fx-background-color: #ffffff; -fx-padding: 30; -fx-border-color: #dddddd; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+
+        <Label text="Cadastro de Usuário" 
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2E7D32;" />
+
+        <VBox spacing="15" alignment="CENTER_LEFT" prefWidth="380">
+            
+            <!-- Nome Completo -->
+            <VBox spacing="5">
+                <Label text="Nome Completo *" 
+                       style="-fx-text-fill: #555555; -fx-font-weight: bold; -fx-font-size: 14px;" />
+                <TextField fx:id="txtNome" promptText="Nome completo"
+                           style="-fx-background-color: #f9f9f9; -fx-border-color: #cccccc; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-height: 40; -fx-font-size: 14px;" />
+            </VBox>
+
+            <!-- E-mail -->
+            <VBox spacing="5">
+                <Label text="E-mail *" 
+                       style="-fx-text-fill: #555555; -fx-font-weight: bold; -fx-font-size: 14px;" />
+                <TextField fx:id="txtEmail" promptText="exemplo@email.com"
+                           style="-fx-background-color: #f9f9f9; -fx-border-color: #cccccc; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-height: 40; -fx-font-size: 14px;" />
+            </VBox>
+
+            <!-- Senha -->
+            <VBox spacing="5">
+                <Label text="Senha *" 
+                       style="-fx-text-fill: #555555; -fx-font-weight: bold; -fx-font-size: 14px;" />
+                <PasswordField fx:id="txtSenha" promptText="Mínimo 6 caracteres"
+                               style="-fx-background-color: #f9f9f9; -fx-border-color: #cccccc; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-height: 40; -fx-font-size: 14px;" />
+            </VBox>
+
+            <!-- Confirmar Senha -->
+            <VBox spacing="5">
+                <Label text="Confirmar Senha *" 
+                       style="-fx-text-fill: #555555; -fx-font-weight: bold; -fx-font-size: 14px;" />
+                <PasswordField fx:id="txtConfirmarSenha" promptText="Digite a senha novamente"
+                               style="-fx-background-color: #f9f9f9; -fx-border-color: #cccccc; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-height: 40; -fx-font-size: 14px;" />
+            </VBox>
+
+            <!-- Perfil -->
+            <VBox spacing="5">
+                <Label text="Perfil *" 
+                       style="-fx-text-fill: #555555; -fx-font-weight: bold; -fx-font-size: 14px;" />
+                <ComboBox fx:id="comboPerfil" prefWidth="380" prefHeight="40"
+                          style="-fx-background-color: #f9f9f9; -fx-border-color: #cccccc; -fx-border-radius: 6px; -fx-background-radius: 6px;" />
+            </VBox>
+
+            <!-- Mensagem de Status -->
+            <Label fx:id="lblMensagem" 
+                   style="-fx-text-fill: #d32f2f; -fx-font-size: 13px; -fx-padding: 10 0 0 0;" 
+                   wrapText="true" />
+
+        </VBox>
+
+        <!-- Botões -->
+        <HBox spacing="15" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+            <Button text="Cadastrar" onAction="#cadastrarUsuario" 
+                    style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-width: 120; -fx-pref-height: 40; -fx-font-size: 14px;" />
+            <Button text="Cancelar" onAction="#fecharJanela"
+                    style="-fx-background-color: #757575; -fx-text-fill: white; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-width: 120; -fx-pref-height: 40; -fx-font-size: 14px;" />
+        </HBox>
+
+        <!-- Informação -->
+        <Label text="* Campos obrigatórios" 
+               style="-fx-text-fill: #666; -fx-font-size: 12px; -fx-font-style: italic; -fx-padding: 10 0 0 0;" />
+
+    </VBox>
+</AnchorPane>

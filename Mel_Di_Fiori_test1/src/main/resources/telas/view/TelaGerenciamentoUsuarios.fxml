@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="tela_login.GerenciamentoUsuariosController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #f5f5f5;">
+
+    <VBox spacing="20" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" 
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+        <!-- Cabeçalho -->
+        <VBox spacing="8" alignment="CENTER" 
+              style="-fx-background-color: #2E7D32; -fx-padding: 20; -fx-background-radius: 10 10 0 0;">
+            <Label text="Gerenciamento de Usuários" 
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 2, 0, 1, 1);" />
+            <Label text="Cadastre e gerencie usuários do sistema" 
+                   style="-fx-font-size: 14px; -fx-text-fill: #e8f5e8; -fx-font-style: italic;" />
+        </VBox>
+
+        <!-- Conteúdo -->
+        <VBox spacing="25" alignment="TOP_CENTER" 
+              style="-fx-background-color: white; -fx-padding: 30; -fx-border-color: #dee2e6; -fx-border-width: 0 1px 1px 1px; -fx-border-radius: 0 0 10 10; -fx-background-radius: 0 0 10 10;">
+
+            <!-- Cartões de Ação -->
+            <HBox spacing="30" alignment="CENTER">
+                
+                <!-- Cartão: Cadastrar Usuário -->
+                <VBox spacing="15" alignment="CENTER" 
+                      style="-fx-background-color: #f8f9fa; -fx-padding: 25; -fx-border-color: #dee2e6; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-pref-width: 250;">
+                    
+                    <Label text="👥" style="-fx-font-size: 40px;" />
+                    
+                    <Label text="Cadastrar Novo Usuário" 
+                           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2E7D32; -fx-alignment: CENTER;" 
+                           wrapText="true" />
+                    
+                    <Label text="Adicione novos administradores ou funcionários ao sistema" 
+                           style="-fx-font-size: 12px; -fx-text-fill: #666; -fx-alignment: CENTER;" 
+                           wrapText="true" />
+                    
+                    <Button text="Cadastrar" onAction="#abrirCadastroUsuario" 
+                            style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-width: 120; -fx-pref-height: 40;" />
+                </VBox>
+
+                <!-- Cartão: Listar Usuários -->
+                <VBox spacing="15" alignment="CENTER" 
+                      style="-fx-background-color: #f8f9fa; -fx-padding: 25; -fx-border-color: #dee2e6; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-pref-width: 250;">
+                    
+                    <Label text="📋" style="-fx-font-size: 40px;" />
+                    
+                    <Label text="Listar Usuários" 
+                           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2E7D32; -fx-alignment: CENTER;" 
+                           wrapText="true" />
+                    
+                    <Label text="Visualize e gerencie todos os usuários cadastrados" 
+                           style="-fx-font-size: 12px; -fx-text-fill: #666; -fx-alignment: CENTER;" 
+                           wrapText="true" />
+                    
+                    <Button text="Listar" onAction="#abrirListaUsuarios" 
+                            style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-width: 120; -fx-pref-height: 40;" />
+                </VBox>
+
+            </HBox>
+
+            <!-- Informações do Sistema -->
+            <VBox spacing="10" alignment="CENTER_LEFT" 
+                  style="-fx-background-color: #e8f5e8; -fx-padding: 20; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-pref-width: 600;">
+                
+                <Label text="ℹ️ Informações de Acesso" 
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2E7D32;" />
+                
+                <Label text="• Apenas usuários ADMIN podem gerenciar outros usuários" 
+                       style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+                
+                <Label text="• ADMIN: Acesso completo ao sistema" 
+                       style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+                
+                <Label text="• FUNCIONARIO: Acesso às funcionalidades básicas" 
+                       style="-fx-font-size: 14px; -fx-text-fill: #555;" />
+            </VBox>
+
+            <!-- Botão Voltar -->
+            <Button text="Voltar ao Dashboard" onAction="#voltarDashboard" 
+                    style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-pref-width: 180; -fx-pref-height: 40;" />
+
+        </VBox>
+    </VBox>
+</AnchorPane>
